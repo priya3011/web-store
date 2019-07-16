@@ -1,0 +1,240 @@
+app {
+    font-family: monospace;
+}
+
+
+.fa-plus {
+    font-size: 20px;
+    margin-right: 5px;
+    color: #111;
+}
+
+.fa-minus {
+    font-size: 20px;
+    margin-left: 5px;
+    color: #111;
+}
+
+.addmore .fa-plus{
+    color: white;
+}
+
+.reduce .fa-minus{
+    color: white;
+}
+
+menulist {
+    display: flex;
+    flex-direction: column;
+}
+
+top-header .container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+}
+
+header {
+    height: 75px;
+    background: #000000;
+    color: #ffffff;
+    font-size: 15px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 9999;
+    display: flex;
+    justify-content: space-between;
+}
+a{
+    color: white;
+}
+
+.cart {
+    margin-top: 23px;
+    margin-right: 35px;
+    display: flex;
+    justify-content: space-between;
+    width: 225px;
+}
+
+items {
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.menu-category {
+    margin: 10px;
+    width: 50vw;
+    border-radius: 8px;
+    box-shadow: 0px 1px 8px 1px grey;
+}
+
+.category-name {
+    border-bottom: 0.1px solid grey;
+    margin: 30px;
+    font-family: monospace;
+    font-size: 18px;
+}
+
+.category-item {
+    margin: 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.item-overview {
+    display: flex;
+    width: auto;
+
+    .hide {
+        display: none !important;
+    }
+}
+
+.dish-name {
+    font-weight: bold;
+}
+
+.dish-image img {
+    width: 226px;
+    background: white;
+    border-radius: 15px;
+}
+
+.item-info {
+    margin-left: 10px;
+}
+
+.item-modifiers {
+}
+
+.item-modifier {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.item-modifiers-name {
+    border-bottom: 1px solid;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+.prep-desc {
+    margin: 2px;
+}
+
+
+
+.cart-counter{
+    position: absolute;
+    border-radius: 72px;
+    width: 28px;
+    height: 28px;
+    border: 1px solid;
+    text-align: center;
+    background: black;
+    color: white;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.dish-add-to-cart{
+    display: flex;
+    flex-direction: row;
+}
+
+.ingredient-btn-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.ingredient-count {
+    padding-left: 2px;
+    padding-right: 2px;
+}
+
+.copyrights{
+    display: flex;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+cart{
+    color: white;
+}
+
+.cart-itm{
+    border-top: 1px solid white;
+    border-bottom: 1px solid white;
+}
+
+.proceed {
+    background: white;
+    color: black;
+    margin: 20px;
+    font-weight: bold;
+    border-radius: 8px;
+    box-shadow: 1px 1px 88px 20px grey;
+}
+
+.menu-data {
+    display: flex;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.menu-data img{
+    max-width: 150px;
+    padding: 10px;
+}
+
+.menu-data .data{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.sidenav {
+  height: 100%;
+  position: fixed;
+
+  top: 0;
+  right: 0;
+  width: 250;
+  background-color: #111;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  justify-content: space-between;
+  padding-top: 120px;
+  padding-left: 20px;
+  padding-right: 20px;
+  text-align: center;
+  align-items: center;
+}
+
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+
+footer{
+    background: black;
+    color: white;
+}
+/*# sourceMappingURL=style.css.map*/

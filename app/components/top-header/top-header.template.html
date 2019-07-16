@@ -1,0 +1,19 @@
+<header id="header">
+    <div><a href="/" id="logo"><img src="../../../img/logo.png"></img></a></div>
+    <div class="cart-wrap logged-in">
+        <div id="cart-checkout" class="cart" >
+            <div>
+                <i class="fa fa-shopping-cart"></i>
+                <span class="icon">{{$ctrl.totalItems}}</span>
+            </div>
+            <div>
+                <span class="total">
+                    <span class="price">{{$ctrl.totalPrice | currency:"CAD "}}</span>
+                </span>
+            </div>
+            <div>
+                <a href="" class="checkout" ng-click="$ctrl.openCart()">View Cart</a>
+            </div>
+        </div>
+    </div>
+</header>

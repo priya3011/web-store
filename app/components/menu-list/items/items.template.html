@@ -1,0 +1,33 @@
+<!-- Menu Item -->
+<div class="menu-category" ng-repeat="item in $ctrl.items">
+        <div class="category-name">{{item.Desc}}</div>
+        <div class="category-item" ng-repeat="dish in item.Items">
+            <div class="item-overview">
+                <div class="img-container">
+                    <div class="cart-counter" ng-show="$ctrl.itemsCount[dish['Item'].ID]">{{ $ctrl.itemsCount[dish['Item'].ID] }}</div>
+                    <div class="dish-image"><img src="{{dish['Item'].img}}"></div>
+                </div>
+                <div class="item-info">
+                    <div class="dish-name">{{dish['Item'].PromptForDesc}}</div>
+                    <div class="dish-desc">{{dish['Item'].desc}}</div>
+                    <div class="dish-desc">{{dish['Item'].Price | currency:"CAD "}}</div>
+                    <div class="dish-add-to-cart">
+                        <icon class="fa fa-plus" ng-click="$ctrl.addToCart({ obj: dish['Item'] })"></icon>
+                        <icon class="fa fa-minus" ng-click="$ctrl.removeFromCart({ obj: dish['Item'] })"></icon>
+                    </div>
+                </div>
+            </div>
+            <div class="item-modifiers">
+                <div class="item-modifiers-name">{{dish['Item'].Modifiers.groupName}}</div>
+                <div class="item-modifier" ng-repeat="prep in dish['Item'].Modifiers.Preps">
+                    <div class="prep-desc">{{prep.Desc}}</div>
+                    <div class="prep-desc">{{prep.Price | currency:"CAD "}}</div>
+                    <div class="ingredient-btn-container">
+                        <icon class="fa fa-plus" ng-click="$ctrl.addIngredientToCart({ id: dish['Item'].ID, ingredientId: prep.ID })"></icon>
+                        <div class="ingredient-count">{{$ctrl.itemsIngredients[dish['Item'].ID][prep.ID].quantity || ' '}}</div>
+                        <icon class="fa fa-minus" ng-click="$ctrl.removeIngredientFromCart({ id: dish['Item'].ID, ingredientId: prep.ID })"></icon>
+                    </div>
+                </div>
+            </div>
+        </div>
+</div>

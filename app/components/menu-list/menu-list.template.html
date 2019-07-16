@@ -1,0 +1,32 @@
+<top-header
+    total-items="$ctrl.totalItems"
+    total-price="$ctrl.totalPrice"
+    open-cart="$ctrl.openCart()"
+    ></top-header>
+
+<section id="items">
+  <div class="container">
+    <div id="menu-list">
+        <items
+            items="$ctrl.menu.items"
+            cart="$ctrl.cart"
+            add-to-cart="$ctrl.addToCart(obj)"
+            remove-from-cart="$ctrl.removeFromCart(obj)"
+            add-ingredient-to-cart = "$ctrl.addIngredientToCart(id, ingredientId)"
+            remove-ingredient-from-cart = "$ctrl.removeIngredientFromCart(id, ingredientId)"
+            items-count = "$ctrl.itemsCount"
+            items-ingredients = "$ctrl.itemsIngredients"
+            ></items>
+    </div>
+  </div>
+</section>
+
+<cart
+    cart-open="$ctrl.cartOpen"
+    open-cart="$ctrl.openCart()"
+    cart="$ctrl.cart"
+    add-to-cart="$ctrl.addToCart(obj)"
+    remove-from-cart="$ctrl.removeFromCart(obj)"
+    total-items="$ctrl.totalItems"
+    total-price="$ctrl.totalPrice"
+    ></cart>

@@ -1,0 +1,60 @@
+<!-- Cart -->
+<div id="cart" class="sidenav" ng-show="$ctrl.cartOpen">
+
+		<div class="cart-menu-list">
+			<div class="cart-itm" ng-repeat="item in $ctrl.cart">
+				<div class="cont">
+
+					<div class="menu-data">
+						<span class="img">
+							<img src="{{item.img}}" alt="">
+						</span>
+						<div class="data">
+							<div class="description name">{{item.PromptForDesc}}</div>
+							<div class="description name">{{item.desc}}</div>
+							<div class="size">{{item.Price | currency: "CAD "}}</div>
+							<div class="qty">
+								<span class="addmore" ng-click="$ctrl.addToCart({ obj: item })"><i class="fa fa-plus"></i></span>
+								<span class="count"><i>{{item.cart_count}}</i></span>
+								<span class="reduce" ng-click="$ctrl.removeFromCart({ obj: item })"><i class="fa fa-minus"></i></span>
+							</div>
+						</div>
+					</div>
+
+
+
+					<div class="pricing">
+						<span class="ptotal">{{item.price | currency:"CAD "}}</span>
+					</div>
+				</div>
+				<div class="close-btn" ng-click="$ctrl.removeFromCart({ obj: item })"><i class="icon-close"></i></div>
+			</div>
+
+
+			<div class="empty-cart-placeholder" ng-show="!$ctrl.cart.length">
+				<span class="icon"><img src="../../../../ico/font-icon/empty-bag.png"></span>
+				<h5 class="title">Looks like your cart is empty</h5>
+				<p>If you want more items to be added<br />when you want to order next time</p>
+				<a href="" class="" ng-click="$ctrl.openCart()">Add Items</a>
+			</div>
+
+		</div>
+
+
+		<div class="cart-footer">
+			<div class="total">
+				<div class="delivery">
+					<span class="text">Delivery</span>
+					<span class=""><span class="strikethrough">CAD 10$</span> FREE</span>
+				</div>
+				<div class="sub-total">
+					<span class="count">Cart subtotal ({{$ctrl.totalItems}})</span>
+					<span class="price price-total">{{$ctrl.totalPrice | currency:"CAD "}}</span>
+				</div>
+			</div>
+			<div class="proceed">
+				<a ui-sref="checkout" class="btn btn-default" ng-class="{'btn-disabled': $ctrl.cart.length === 0}">Proceed to Checkout</a>
+			</div>
+		</div>
+
+</div>
